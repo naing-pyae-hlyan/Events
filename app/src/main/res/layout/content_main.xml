@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/et_event_name"
+        android:layout_margin="@dimen/medium_padding"
+        android:hint="@string/event_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_margin="@dimen/medium_padding"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        Start Date Time-->
+        <LinearLayout
+            android:weightSum="5"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".4"
+                android:src="@drawable/ic_watch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_start_date"
+                android:layout_weight="2.3"
+                android:hint="Today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_start_time"
+                android:layout_weight="2.3"
+                android:hint="6:00PM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+<!--        Start End Date Time-->
+        <LinearLayout
+            android:weightSum="5"
+            android:layout_marginTop="@dimen/medium_padding"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight=".4"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <EditText
+                android:id="@+id/et_end_date"
+                android:layout_weight="2.3"
+                android:hint="Today"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_end_time"
+                android:layout_weight="2.3"
+                android:hint="6:00PM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+<!--        End of  End Date Time-->
+<!--        Start Location-->
+        <LinearLayout
+            android:weightSum="5"
+            android:layout_marginTop="@dimen/medium_padding"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".4"
+                android:src="@drawable/ic_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_location"
+                android:layout_weight="4.6"
+                android:hint="Location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+<!--        End Location-->
+
+
+<!--        Start Details-->
+        <LinearLayout
+            android:weightSum="5"
+            android:layout_marginTop="@dimen/medium_padding"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".4"
+                android:src="@drawable/ic_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_details"
+                android:layout_weight="4.6"
+                android:hint="Details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+<!--        End of  Details-->
+
+<!--        Start Invite-->
+        <LinearLayout
+            android:weightSum="5"
+            android:layout_marginTop="@dimen/medium_padding"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".4"
+                android:src="@drawable/ic_email"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+            <TextView
+                android:layout_weight="4"
+                android:textSize="16sp"
+                android:text="Guests can invite friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_invite_friends"
+                android:layout_weight=".6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+<!--        End Invite-->
+
+<!--        Start Co-host-->
+        <LinearLayout
+            android:weightSum="5"
+            android:layout_marginTop="@dimen/medium_padding"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_weight=".4"
+                android:src="@drawable/ic_supervisor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/et_co_hosts"
+                android:layout_weight="4.6"
+                android:hint="Co-hosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+<!--        End Co-host-->
+
+        <Button
+            android:id="@+id/btn_event_create"
+            android:layout_margin="@dimen/xxlarge_padding"
+            android:background="@drawable/round_button_padding"
+            android:backgroundTint="@color/color1"
+            android:text="@string/create"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
